@@ -1,2 +1,4 @@
 *.idea
-*.squlite3
+*.sqlite3
+.env
+*pyc
