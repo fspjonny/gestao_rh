@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'django_filters',
     'apps.empresas',
     'apps.colaboradores',
+    'apps.departamentos',
 ]
 
 MIDDLEWARE = [

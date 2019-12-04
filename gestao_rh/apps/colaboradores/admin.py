@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import colaborador
+from .models import Colaborador
 
-admin.site.register(colaborador)
+admin.site.register(Colaborador)
