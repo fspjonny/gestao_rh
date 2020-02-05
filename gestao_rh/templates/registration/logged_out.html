@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<div class="jumbotron mt-4 box_shadow">
+  <p class="display-4 text-center">Você fez logout do sistema!</p>
+  <p class="lead">Se quiser retornar ao sistema faça seu login novamente!.</p>
+  <hr class="my-4">
+  <a class="btn btn-primary btn-md box_shadow texto_sombra" href="{% url 'inicio' %}">Login</a>
+</div>
+{% endblock %}

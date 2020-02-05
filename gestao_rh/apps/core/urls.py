@@ -1,6 +1,7 @@
 from django.urls import path
-from .views import inicio
+from .views import inicio,saiu
 
 urlpatterns = [
-    path('', inicio),
+    path('', inicio, name='inicio'),
+    path('accounts/', saiu, name='saiu'),
 ]

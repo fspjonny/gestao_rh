@@ -2,7 +2,31 @@
 
 {% block title %}Página inicial do RH{% endblock %}
 
-{% block main %}
-    <h1 class="alert alert-primary text-center">Sejam bem vindos</h1>
+{% block header %}
+        <nav class="nav nav-pills nav-justified box_shadow bg bg-info">
+          <a class="nav-item nav-link text-white texto_sombra" href="#">Item 1</a>
+          <a class="nav-item nav-link text-white texto_sombra" href="#">Item 2</a>
+          <a class="nav-item nav-link text-white texto_sombra" href="#">Item 3</a>
+          <a class="nav-item nav-link text-white texto_sombra" href="#">Item 4</a>
+          <a class="nav-item nav-link text-white texto_sombra" href="{% url 'logout' %}"><span class="btn btn-secondary btn-sm border-white texto_sombra">Logout</span></a>
+        </nav>
 {% endblock %}
 
+{% block main %}
+<h4 class="alert alert-light text-center mt-3 box_shadow texto_sombra">Seja bem vindo
+    <span class="badge badge-info text-light">{{user}}</span></h4>
+{% endblock %}
+
+{% block content %}
+    <div class="jumbotron jumbotron-fluid bg-light box_shadow">
+      <div class="container">
+        <h1 class="display-4">Recursos Humanos Online</h1>
+        <p class="lead">Sistema de gerenciamento de RH.</p>
+      </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+<span class="float-left mr-4 text-muted fonte_sm">Logado em: <b>{{user.last_login}}</b></span>
+    <span class="float-right mr-4">{% now "SHORT_DATETIME_FORMAT" %}</span>
+{% endblock %}
